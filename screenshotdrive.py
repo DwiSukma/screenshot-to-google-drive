@@ -8,7 +8,7 @@ from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
 
 # If modifying these SCOPES, delete the file token.pickle.
-SCOPES = ['https://www.googleapis.com/auth/drive.file']
+SCOPES = ['']
 
 def authenticate_google_drive():
     creds = None
@@ -46,7 +46,7 @@ def main():
     drive_service = build('drive', 'v3', credentials=creds)
     
     # Tempat hasil screenshot disimpan
-    screenshots_dir = '/home/arga/Pictures/Screenshots'
+    screenshots_dir = '/your/path'
     
     # Upload each screenshot to Google Drive
     for filename in os.listdir(screenshots_dir):
